@@ -18,13 +18,13 @@ export default function NavBar(props) {
             <nav className={styles.navBarMenu}>
                 <ul className={styles.navBarMenuList}>
                     <li className={styles.navBarMenuListItem}>
-                        <Link className={styles.navBarLink} to="/">{process.env.REACT_APP_GANG_NAME}</Link>
+                        <Link className={styles.navBarLink} to="/necromunda">{process.env.REACT_APP_GANG_NAME}</Link>
                     </li>
                     <li className={styles.navBarMenuListItem}>
-                        <Link className={styles.navBarLink} to="/gang">Gang</Link>
+                        <Link className={styles.navBarLink} to="/necromunda/gang">Gang</Link>
                     </li>
                     <li className={styles.navBarMenuListItem}>
-                        <Link className={styles.navBarLink} to="/fighters">Fighters</Link>
+                        <Link className={styles.navBarLink} to="/necromunda/fighters">Fighters</Link>
                     </li>
                 </ul>
             </nav>

@@ -14,9 +14,9 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/gang" element={<Gang />} />
-          <Route path="/fighters" element={<Fighters />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/necromunda/gang" element={<Gang />} />
+          <Route path="/necromunda/fighters" element={<Fighters />} />
+          <Route path="/necromunda" element={<Home />} />
         </Routes>
       </main>
     </div>
