@@ -98,6 +98,11 @@ td {
   background-color: #b09a90;
 }
 
+/* HOME */
+.main-image {
+  width: 100%;
+}
+
 /* GANG */
 .gang-roster {
   display: flex;
