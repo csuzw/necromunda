@@ -1,7 +1,7 @@
 import React from 'react';
 import CharacteristicValue from './CharacteristicValue';
 
-import { fighterHelper } from '../data/gangHelper';
+import { fighterHelper } from '../data/helpers/gangHelper';
 
 export default function FighterCard(props) {
 

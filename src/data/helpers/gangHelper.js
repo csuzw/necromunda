@@ -1,4 +1,4 @@
-import dataHelper from "./dataHelper";
+import equipmentHelper from "./equipmentHelper";
 
 const getWargear = (fighter) => {
     const weaponWargear = fighter.weapons.flatMap(weapon => weapon?.wargear ?? []);
@@ -7,15 +7,15 @@ const getWargear = (fighter) => {
 
 export const fighterHelper = {
     
-    getCost: (fighter) => fighter.cost + dataHelper.getWeaponsCost(fighter.weapons) + dataHelper.getWargearsCost(getWargear(fighter)),
-    getWeaponProfiles: (fighter) => dataHelper.getWeaponsProfile(fighter.weapons),
+    getCost: (fighter) => fighter.cost + equipmentHelper.getWeaponsCost(fighter.weapons) + equipmentHelper.getWargearsCost(getWargear(fighter)),
+    getWeaponProfiles: (fighter) => equipmentHelper.getWeaponsProfile(fighter.weapons),
     getSkillsDisplayText: (fighter) => fighter.skills.join(", "),
-    getWargearDisplayText: (fighter) => dataHelper.getWargearsDisplayText(getWargear(fighter)),
+    getWargearDisplayText: (fighter) => equipmentHelper.getWargearsDisplayText(getWargear(fighter)),
     getRulesDisplayText: (fighter) => fighter.rules?.join(", "),
 }
 
 const getRating = (gang) => gang.fighters.reduce((previous, current) => previous + fighterHelper.getCost(current), 0);
-const getStashCost = (gang) => gang.stash.credits + dataHelper.getWeaponsCost(gang.stash.weapons) + dataHelper.getWargearsCost(gang.stash.wargear);
+const getStashCost = (gang) => gang.stash.credits + equipmentHelper.getWeaponsCost(gang.stash.weapons) + equipmentHelper.getWargearsCost(gang.stash.wargear);
 const getWealth = (gang) => getRating(gang) + getStashCost(gang);
 
 export const gangHelper = {
@@ -31,6 +31,6 @@ export const gangHelper = {
         return !isNaN(wealth) ? wealth : "";
     },
 
-    getStashWeaponsDisplayText: (gang) => dataHelper.getWeaponsDisplayText(gang.stash.weapons),
-    getStashWargearDisplayText: (gang) => dataHelper.getWargearsDisplayText(gang.stash.wargear),
+    getStashWeaponsDisplayText: (gang) => equipmentHelper.getWeaponsDisplayText(gang.stash.weapons),
+    getStashWargearDisplayText: (gang) => equipmentHelper.getWargearsDisplayText(gang.stash.wargear),
 };

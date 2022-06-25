@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsCheck2 } from 'react-icons/bs';
 
-import { fighterHelper } from '../data/gangHelper';
+import { fighterHelper } from '../data/helpers/gangHelper';
 
 export default function GangRosterFighter(props) {
 

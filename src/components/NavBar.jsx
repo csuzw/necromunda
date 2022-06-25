@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import styles from './NavBar.module.css';
+import styles from './NavBar.module.scss';
 
 import logo from '../assets/logo.svg';
-
-
 
 export default function NavBar(props) {
     const [isHamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);

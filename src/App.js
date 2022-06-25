@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Gang from './pages/Gang';
 import Fighters from './pages/Fighters';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

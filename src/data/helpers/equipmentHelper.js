@@ -1,4 +1,4 @@
-import { weapons as Weapons, wargear as Wargear } from './data';
+import { weapons as Weapons, wargear as Wargear } from '../equipment';
 
 const getWeaponCost = function(weapon, allWeapons = Weapons, allWargear = Wargear) {
 
@@ -69,7 +69,7 @@ const getWargearDisplayText = function(wargear) {
     }        
 };
 
-const dataHelper = {
+const equipmentHelper = {
     getWeaponsCost: (weapons) => weapons.reduce((previous, current) => previous + getWeaponCost(current), 0),
     getWeaponsDisplayText: (weapons) => weapons.map(weapon => getWeaponDisplayText(weapon)).join(', '),
     getWeaponsProfile: (weapons) => weapons.flatMap(weapon => getWeaponProfile(weapon)),
@@ -79,4 +79,4 @@ const dataHelper = {
 }
 
 
-export default dataHelper;
+export default equipmentHelper;

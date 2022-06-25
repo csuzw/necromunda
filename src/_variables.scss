@@ -1,0 +1,23 @@
+/* VARIABLES */
+$normal-font: "Frutiger";
+$header-font: "BankGothic";
+$header-color: #5d130d;
+$background-color: #dedede;
+$section-color: #cbcbcb;
+$text-background-color: white;
+$text-alt-background-color: #b09a90;
+$positive-color: blue;
+$negative-color: red;
+
+/* FONTS */
+@font-face {
+    font-family: "Frutiger";
+    src: url("./assets/Frutiger.woff2") format("woff2"),
+        url("./assets/Frutiger.woff") format("woff");
+}
+
+@font-face {
+    font-family: "BankGothic";
+    src: url("./assets/BankGothic.woff2") format("woff2"),
+        url("./assets/BankGothic.woff") format("woff");
+}

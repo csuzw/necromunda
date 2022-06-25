@@ -1,0 +1,220 @@
+@use 'variables';
+
+/* COMMON */
+body {
+    font-family: variables.$normal-font;
+    font-weight: normal;
+    font-style: normal;
+    background-color: variables.$background-color;
+}
+
+.text-label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+    font-family: variables.$header-font;
+    font-weight: normal;
+    font-style: normal;
+    color: variables.$header-color;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0;
+    padding: 10px;
+}
+
+table {
+    table-layout: auto;
+    border-spacing: 4px 2px;
+    background-color: variables.$section-color;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+th {
+    text-align: left;
+    white-space: nowrap;
+}
+
+td {
+    vertical-align: top;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.text-label {
+    text-align: center;
+}
+
+.text-value {
+    background-color: variables.$text-background-color;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.text-value:empty {
+    padding: 0;
+}
+
+.text-sm {
+    font-size: smaller;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-numeric {
+    text-align: right;
+}
+
+.text-positive {
+    color: variables.$positive-color;
+}
+
+.text-negative {
+    color: variables.$negative-color;
+}
+
+.text-2d6 {
+    background-color: variables.$text-alt-background-color;
+}
+
+/* HOME */
+.main-image {
+    width: 100%;
+}
+
+/* GANG */
+.gang-roster {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.gang-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.gang-summary-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: variables.$section-color;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.gang-roster-fighters {
+    flex: 5;
+}
+
+.gang-roster-fighters table {
+    width: 100%;
+}
+
+.gang-values {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.gang-values > div {
+    flex: auto;
+}
+
+.gang-stash {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .gang-roster {
+        flex-direction: column;
+    }
+
+    .gang-roster-fighters {
+        overflow-x: scroll;
+    }
+}
+
+/* FIGHTERS */
+.fighter-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.fighter-card {
+    background-color: variables.$section-color;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: min-content;
+}
+
+.fighter-title {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.fighter-name {
+    flex: 1;
+}
+
+.fighter-characteristics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.fighter-weapons {
+    display: grid;
+    grid-template-columns: max-content 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
+    gap: 5px;
+}
+
+.fighter-skills-and-wargear {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .fighter-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PRINTING */
+@media print {
+    body {
+        background-color: transparent;
+    }
+
+    header {
+        display: none;
+    }
+}

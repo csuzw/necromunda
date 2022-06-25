@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { gangHelper } from '../data/gangHelper';
+import { gangHelper } from '../data/helpers/gangHelper';
 
 export default function GangRosterSummary(props) {
     return (
