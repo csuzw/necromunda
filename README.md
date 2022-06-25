@@ -1,29 +1,36 @@
-# Servants of the Shrike
+# Necromunda
 
-<https://csuzw.github.io/necromunda>
+For Necromunda-y stuff!
+
+Currently hosted at: <https://csuzw.github.io/necromunda>
 
 # Getting Started
 
 * Install nodejs and visual studio code
+* Install `Flow Language Support` 
 * Create a github account
-* Fork https://github.com/csuzw/necromunda
+* Fork and clone https://github.com/csuzw/necromunda
+* Run `npm install` and `npm run flow` (you may need to make a configuration change to get syntax highlighting working correctly for [flow type definitions](https://flow.org/en/docs/))
 * Update `src/package.json`.`homepage` to `https://{your-github-username}.github.io/necromunda`
     * You could also change `name` variable to something other than `corvus-cabal` but I don't think this really affects anything meaningful for now
 * Update `.env`.`REACT_APP_GANG_NAME` to the name of your gang
 * Update fonts and colours by modifying `src/_variables.scss` 
     * Or modify style further by changing `src/App.scss` and `src/components/NavBar.module.scss`
-* Update `src/data/gang.js` and `src/data/equipment.js` <- THIS BIT IS COMPLICATED!
+* Update `src/data/gang.js` and `src/data/equipment.js`
+    * [flow type definitions](https://flow.org/en/docs/) can be found at the end of these files.  If you have configured flow correctly, you should be warned of any errors you make when editing the objects in these files.
 * Test using `npm start`
 * Deploy using `npm run deploy`
 
 # TODO
 
-* Define gang/data formats
-* Image and nickname to fighter cards
-* Add gang narrative to home page
-* gang name ideas
-    * Shrike, Abattoir, Watch, Butcher Birds, Laniidae, Lanius
-    * Assemblage, Coterie, Set, Squad, Syndicate, Scryers, Disciples, Fraternity, Seers, Followers, Acolytes, Servants, Scavengers, Apostles, Sisterhood, Prophets
-    * Nest, Roost, Cradle, Perch
-    * Servants of the Shrike
+* Website
+    * Image and nickname to fighter cards
+    * Add gang/fighter/campaign narrative sections
+
+* Gang
+    * Naming
+        * Shrike, Abattoir, Watch, Butcher Birds, Laniidae, Lanius
+        * Assemblage, Coterie, Set, Squad, Syndicate, Scryers, Disciples, Fraternity, Seers, Followers, Acolytes, Servants, Scavengers, Apostles, Sisterhood, Prophets
+        * Nest, Roost, Cradle, Perch
+        * Servants of the Shrike
 

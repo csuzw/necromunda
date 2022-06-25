@@ -1,27 +1,30 @@
-const combatShotgunAmmo = {
+// @flow
+const combatShotgunAmmo: AmmoMap = {
     "Firestorm ammo": { cost: 30, rarity: "rare", rarityLevel: 8 }
 }
 
-const sawnOffShotgunAmmo = {
+const sawnOffShotgunAmmo: AmmoMap = {
     "Solid ammo": { 
         cost: 5, rarity: "common",
-        profile: {  name: "- with solid ammo", range: { short: '4"', long: '8"' }, accuracy: { short: "-", long: "-2" }, strength: "4", armourPenetration: "-", damage: "2", ammo: "6+", traits: [ "Knockback", "Plentiful" ] },
+        profile: [
+            {  name: "- with solid ammo", range: { short: '4"', long: '8"' }, accuracy: { short: "-", long: "-2" }, strength: "4", armourPenetration: "-", damage: "2", ammo: "6+", traits: [ "Knockback", "Plentiful" ] }
+        ],
     }
 }
 
-const shotgunAmmo = {
+const shotgunAmmo: AmmoMap = {
     "Executioner ammo": { cost: 20, rarity: "rare", rarityLevel: 9 },
     "Inferno ammo": { cost: 15, rarity: "rare", rarityLevel: 8 }
 }
 
-const stubgunAmmo = {
+const stubgunAmmo: AmmoMap = {
     "Dumdum rounds": { cost: 5, rarity: "rare", rarityLevel: 7 },
 }
 
-const grenadeLauncherAmmo = {
+const grenadeLauncherAmmo: AmmoMap = {
 }
 
-export const weapons = {
+export const weapons: WeaponMap = {
     // BASIC
     "Autogun": { 
         cost: 15, rarity: "common", type: "ranged", subType: "basic", 
@@ -62,7 +65,6 @@ export const weapons = {
             {  name: "- with shredder ammo", range: { short: "-", long: "T" }, accuracy: { short: "-", long: "-" }, strength: "2", armourPenetration: "-", damage: "1", ammo: "4+", traits: [ "Scattershot", "Template" ] },
         ] 
     },
-    "Firestorm ammo": { cost: 30, rarity: "rare", rarityLevel: 8, type: "ranged", subType: "basic", isAmmo: true },
     "Lasgun": { 
         cost: 15, rarity: "common", type: "ranged", subType: "basic", 
         profile: [ 
@@ -165,7 +167,7 @@ export const weapons = {
     },
 }
 
-export const wargear = {  
+export const wargear: WargearMap = {  
     // ARMOUR
     "Light carapace armour": { cost: 80, rarity: "rare", rarityLevel: 10, type: "armour" },
     "Heavy carapace armour": { cost: 100, rarity: "rare", rarityLevel: 11, type: "armour" },
@@ -191,3 +193,60 @@ export const wargear = {
     "Opulent jewellery": { cost: 80, rarity: "rare", rarityLevel: 11, type: "statusItems", subType: "extravagantGoods" },
     "Uphive raiments": { cost: 50, rarity: "rare", rarityLevel: 10, type: "statusItems", subType: "extravagantGoods" },
 }
+
+/* TYPES */
+type AmmoMap = {|
+    [string]: Ammo
+|}
+
+type WeaponMap = {|
+    [string]: Weapon
+|}
+
+type WargearMap = {|
+    [string]: Wargear
+|}
+
+type Profile = {|
+    name: string,
+    range: {|
+        short: string,
+        long: string
+    |},
+    accuracy: {|
+        short: string,
+        long: string
+    |},
+    strength: string,
+    armourPenetration: string,
+    damage: string,
+    ammo: string,
+    traits: Array<string>
+|} | {|
+    name: string
+|}
+
+type Ammo = {|
+    cost: number,
+    rarity?: string,
+    rarityLevel?: number,
+    profile?: Array<Profile>
+|}
+
+type Weapon = {|
+    cost: number,
+    rarity?: string,
+    rarityLevel?: number,
+    type?: string,
+    subType?: string,
+    ammo?: AmmoMap,
+    profile?: Array<Profile>
+|}
+
+type Wargear = {|
+    cost: number | "*",
+    rarity?: string,
+    rarityLevel?: number,
+    type?: string,
+    subType?: string
+|}

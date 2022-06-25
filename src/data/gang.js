@@ -1,5 +1,8 @@
-export const gang = {
-    name: process.env.REACT_APP_GANG_NAME,
+// @flow
+const gangName = process.env.REACT_APP_GANG_NAME || "GANG NAME NOT SET";
+
+export const gang: Gang = {
+    name: gangName,
     house: "Underhive Outcasts",
     affiliation: "Cawdor",
     reputation: 1,
@@ -296,3 +299,62 @@ export const gang = {
         },
     ]
 };
+
+/* TYPES */
+type Weapon = string | {|
+    name: string,
+    wargear: Array<string>,
+    ammo: Array<string>
+|}
+
+type Characteristics = {|
+    movement: Characteristic,
+    weaponSkill: Characteristic,
+    ballisticSkill: Characteristic,
+    strength: Characteristic,
+    toughness: Characteristic,
+    wounds: Characteristic,
+    initiative: Characteristic,
+    attacks: Characteristic,
+    leadership: Characteristic,
+    cool: Characteristic,
+    willpower: Characteristic,
+    intelligence: Characteristic,
+|}
+
+type Characteristic = {|
+    base: number,
+    modifier: number
+|}
+
+type Fighter = {|
+    name: string,
+    nickname?: string,
+    type: string,
+    archetype?: string,
+    cost: number,
+    experience: number,
+    advancements: number,
+    inRecovery: boolean,
+    capturedBy: string,
+    lastingInjuries: string,
+    characteristics: Characteristics,
+    weapons: Array<Weapon>,
+    wargear: Array<string>,
+    skills: Array<string>,
+    rules: Array<string>
+|}
+
+type Gang = {|
+    name: string,
+    house: string,
+    affiliation?: string,
+    reputation: number,
+    territories: Array<string>,
+    stash: {
+        credits: number,
+        weapons: Array<Weapon>,
+        wargear: Array<string>
+    },
+    fighters: Array<Fighter>
+|}
