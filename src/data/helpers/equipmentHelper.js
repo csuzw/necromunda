@@ -1,5 +1,18 @@
 import { weapons as Weapons, wargear as Wargear } from '../equipment';
 
+const getWargearCost = function(wargear, weaponCost = 0, allWargear = Wargear) {
+
+    switch (typeof wargear) {
+        case 'string':
+            let wargearData = allWargear[wargear];
+            if (!wargearData) return NaN;
+            if (wargearData.cost !== "*") return wargearData.cost;
+            return Math.ceil((weaponCost * 0.25) / 5) * 5;
+        default:
+            return NaN;
+    }
+};
+
 const getWeaponCost = function(weapon, allWeapons = Weapons, allWargear = Wargear) {
 
     switch (typeof weapon) {
@@ -45,19 +58,6 @@ const getWeaponProfile = function(weapon, allWeapons = Weapons) {
             return [];
     }
 }
-
-const getWargearCost = function(wargear, weaponCost = 0, allWargear = Wargear) {
-
-    switch (typeof wargear) {
-        case 'string':
-            let wargearData = allWargear[wargear];
-            if (!wargearData) return NaN;
-            if (wargearData.cost !== "*") return wargearData.cost;
-            return Math.ceil((weaponCost * 0.25) / 5) * 5;
-        default:
-            return NaN;
-    }
-};
 
 const getWargearDisplayText = function(wargear) {
 

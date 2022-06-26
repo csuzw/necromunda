@@ -1,6 +1,7 @@
 // @flow
 const gangName = process.env.REACT_APP_GANG_NAME || "GANG NAME NOT SET";
 
+/* eslint-disable no-use-before-define */
 export const gang: Gang = {
     name: gangName,
     house: "Underhive Outcasts",
@@ -18,7 +19,7 @@ export const gang: Gang = {
             nickname: "The Shrike",
             type: "Leader",
             archetype: "Wyrd",
-            cost: 125,
+            baseCost: 125,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -47,7 +48,7 @@ export const gang: Gang = {
             name: "Brother Mask",
             type: "Champion",
             archetype: "Gunslinger",
-            cost: 60,
+            baseCost: 60,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -76,7 +77,7 @@ export const gang: Gang = {
             name: "Brother Ludovic",
             type: "Champion",
             archetype: "Mastermind",
-            cost: 60,
+            baseCost: 60,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -104,7 +105,7 @@ export const gang: Gang = {
         {
             name: "Sister Isabelline",
             type: "Ganger",
-            cost: 30,
+            baseCost: 30,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -132,7 +133,7 @@ export const gang: Gang = {
         {
             name: "Sister Dorsa",
             type: "Ganger",
-            cost: 30,
+            baseCost: 30,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -160,7 +161,7 @@ export const gang: Gang = {
         {
             name: "Brother Coll",
             type: "Ganger",
-            cost: 30,
+            baseCost: 30,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -188,7 +189,7 @@ export const gang: Gang = {
         {
             name: "Brother Schach",
             type: "Ganger",
-            cost: 30,
+            baseCost: 30,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -216,7 +217,7 @@ export const gang: Gang = {
         {
             name: "Sister Tigrin",
             type: "Ganger",
-            cost: 30,
+            baseCost: 30,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -244,7 +245,7 @@ export const gang: Gang = {
         {
             name: "Brother Newton",
             type: "Ganger",
-            cost: 30,
+            baseCost: 30,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -272,7 +273,7 @@ export const gang: Gang = {
         {
             name: "Brother Gub",
             type: "Ganger",
-            cost: 30,
+            baseCost: 30,
             experience: 0,
             advancements: 0,
             inRecovery: false,
@@ -299,12 +300,18 @@ export const gang: Gang = {
         },
     ]
 };
+/* eslint-enable no-use-before-define */
 
 /* TYPES */
 type Weapon = string | {|
     name: string,
     wargear: Array<string>,
     ammo: Array<string>
+|}
+
+type Characteristic = {|
+    base: number,
+    modifier: number
 |}
 
 type Characteristics = {|
@@ -322,17 +329,12 @@ type Characteristics = {|
     intelligence: Characteristic,
 |}
 
-type Characteristic = {|
-    base: number,
-    modifier: number
-|}
-
 type Fighter = {|
     name: string,
     nickname?: string,
     type: string,
     archetype?: string,
-    cost: number,
+    baseCost: number,
     experience: number,
     advancements: number,
     inRecovery: boolean,

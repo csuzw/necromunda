@@ -1,4 +1,6 @@
 // @flow
+
+/* eslint-disable no-use-before-define */
 const combatShotgunAmmo: AmmoMap = {
     "Firestorm ammo": { cost: 30, rarity: "rare", rarityLevel: 8 }
 }
@@ -193,20 +195,9 @@ export const wargear: WargearMap = {
     "Opulent jewellery": { cost: 80, rarity: "rare", rarityLevel: 11, type: "statusItems", subType: "extravagantGoods" },
     "Uphive raiments": { cost: 50, rarity: "rare", rarityLevel: 10, type: "statusItems", subType: "extravagantGoods" },
 }
+/* eslint-enable no-use-before-define */
 
 /* TYPES */
-type AmmoMap = {|
-    [string]: Ammo
-|}
-
-type WeaponMap = {|
-    [string]: Weapon
-|}
-
-type WargearMap = {|
-    [string]: Wargear
-|}
-
 type Profile = {|
     name: string,
     range: {|
@@ -233,6 +224,10 @@ type Ammo = {|
     profile?: Array<Profile>
 |}
 
+type AmmoMap = {|
+    [string]: Ammo
+|}
+
 type Weapon = {|
     cost: number,
     rarity?: string,
@@ -249,4 +244,12 @@ type Wargear = {|
     rarityLevel?: number,
     type?: string,
     subType?: string
+|}
+
+type WeaponMap = {|
+    [string]: Weapon
+|}
+
+type WargearMap = {|
+    [string]: Wargear
 |}

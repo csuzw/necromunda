@@ -6,9 +6,9 @@ Currently hosted at: <https://csuzw.github.io/necromunda>
 
 # Getting Started
 
-* Install nodejs and visual studio code
-* Install `Flow Language Support` 
-* Create a github account
+* Install [nodejs](https://nodejs.org/en/), [git](https://git-scm.com/), and [Visual Studio Code](https://code.visualstudio.com/)
+* Install `Flow Language Support` extension for Visual Studio Code
+* Create a [GitHub](https://github.com/) account
 * Fork and clone https://github.com/csuzw/necromunda
 * Run `npm install` and `npm run flow` (you may need to make a configuration change to get syntax highlighting working correctly for [flow type definitions](https://flow.org/en/docs/))
 * Update `src/package.json`.`homepage` to `https://{your-github-username}.github.io/necromunda`
