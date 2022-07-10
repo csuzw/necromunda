@@ -105,6 +105,7 @@ export const gang: Gang = {
         {
             name: "Sister Isabelline",
             type: "Ganger",
+            color: "#C2191F",
             baseCost: 30,
             experience: 0,
             advancements: 0,
@@ -133,6 +134,7 @@ export const gang: Gang = {
         {
             name: "Sister Dorsa",
             type: "Ganger",
+            color: "#FFF200",
             baseCost: 30,
             experience: 0,
             advancements: 0,
@@ -161,6 +163,7 @@ export const gang: Gang = {
         {
             name: "Brother Coll",
             type: "Ganger",
+            color: "#EE3823",
             baseCost: 30,
             experience: 0,
             advancements: 0,
@@ -189,6 +192,7 @@ export const gang: Gang = {
         {
             name: "Brother Schach",
             type: "Ganger",
+            color: "#7C1645",
             baseCost: 30,
             experience: 0,
             advancements: 0,
@@ -217,6 +221,7 @@ export const gang: Gang = {
         {
             name: "Sister Tigrin",
             type: "Ganger",
+            color: "#0D407F",
             baseCost: 30,
             experience: 0,
             advancements: 0,
@@ -245,6 +250,7 @@ export const gang: Gang = {
         {
             name: "Brother Newton",
             type: "Ganger",
+            color: "#34A2CF",
             baseCost: 30,
             experience: 0,
             advancements: 0,
@@ -273,6 +279,7 @@ export const gang: Gang = {
         {
             name: "Brother Gub",
             type: "Ganger",
+            color: "#52B244",
             baseCost: 30,
             experience: 0,
             advancements: 0,
@@ -334,6 +341,7 @@ type Fighter = {|
     nickname?: string,
     type: string,
     archetype?: string,
+    color?: string,
     baseCost: number,
     experience: number,
     advancements: number,
