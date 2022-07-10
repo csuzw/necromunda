@@ -101,10 +101,26 @@ td {
 }
 
 .fighter-images {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
-    justify-content: space-between;
+}
+
+.fighter-image {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .fighter-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .fighter-images {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* GANG */
