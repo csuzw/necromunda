@@ -6,10 +6,11 @@ import { fighterHelper } from '../data/helpers/gangHelper';
 export default function GangRosterFighter(props) {
 
     const cost = fighterHelper.getCost(props.fighter);
+    const borderColor = props.fighter.color ?? "black";
 
     return (
         <tr>
-            <td className="text-value">{props.fighter.name}</td>
+            <td className="text-value" style={{borderStyle: 'solid', borderWidth:'2px', borderColor: borderColor}}>{props.fighter.name}</td>
             <td className="text-value">{props.fighter.type}</td>
             <td className="text-value text-numeric">{cost}</td>
             <td className="text-value text-numeric">{props.fighter.experience}</td>
