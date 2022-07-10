@@ -24,7 +24,6 @@ Currently hosted at: <https://csuzw.github.io/necromunda>
 # TODO
 
 * Website
-    * Image and nickname to fighter cards
     * Add gang/fighter/campaign narrative sections
 
 * Gang

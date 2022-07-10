@@ -1,7 +1,10 @@
 import React from 'react';
+import Gallery from '../components/Gallery';
+
+import { gang } from '../data/gang.js';
 
 export default function Home() {
     return (
-        <img className="main-image" src={process.env.PUBLIC_URL + '/img/gang.jpg'} alt="The gang" />
+        <Gallery gang={gang} />
     );
 }
