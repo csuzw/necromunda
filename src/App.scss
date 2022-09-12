@@ -130,13 +130,13 @@ td {
 /* GANG */
 .gang-roster {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5px;
 }
 
 .gang-summary {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 5px;
     flex: 1;
 }
@@ -148,6 +148,7 @@ td {
     background-color: variables.$section-color;
     padding: 5px;
     border-radius: 5px;
+    width: 25%;
 }
 
 .gang-roster-fighters {
@@ -156,16 +157,6 @@ td {
 
 .gang-roster-fighters table {
     width: 100%;
-}
-
-.gang-values {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.gang-values > div {
-    flex: auto;
 }
 
 .gang-stash {
