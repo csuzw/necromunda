@@ -159,6 +159,30 @@ td {
     width: 100%;
 }
 
+.gang-roster-battles table {
+    width: 100%;
+}
+
+.battle-me {
+    color: variables.$success-color;
+}
+
+.battle-opponent {
+    color: variables.$failure-color;
+}
+
+tr.battle-success td {
+    border-style: solid; 
+    border-width: 2px;
+    border-color: variables.$success-color;
+}
+
+tr.battle-failure td {
+    border-style: solid; 
+    border-width: 2px;
+    border-color: variables.$failure-color;
+}
+
 .gang-stash {
     display: flex;
     flex-direction: column;

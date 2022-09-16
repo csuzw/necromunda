@@ -13,6 +13,16 @@ export const gang: Gang = {
         weapons: [],
         wargear: []
     },
+    battles: [
+        {
+            territory: "Tunnels",
+            scenario: "Blood Rites",
+            opponentName: "Gravis Veritas",
+            opponentHouse: "Van Saar",
+            success: false,
+            outOfAction: { me: 0, opponent: 4 }
+        }
+    ],
     fighters: [
         {
             name: "Mother Excubita",
@@ -408,6 +418,20 @@ type Fighter = {|
     rules: Array<string>
 |}
 
+type OutOfAction = {|
+    me: number,
+    opponent: number
+|}
+
+type Battle = {|
+    territory: string,
+    scenario: string,
+    opponentName: string,
+    opponentHouse: string,
+    success: boolean,
+    outOfAction: OutOfAction
+|}
+
 type Gang = {|
     name: string,
     house: string,
@@ -419,5 +443,6 @@ type Gang = {|
         weapons: Array<Weapon>,
         wargear: Array<string>
     },
+    battles: Array<Battle>,
     fighters: Array<Fighter>
 |}
