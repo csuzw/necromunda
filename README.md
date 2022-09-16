@@ -21,7 +21,3 @@ Currently hosted at: <https://csuzw.github.io/necromunda>
 * Test using `npm start`
 * Deploy using `npm run deploy`
 
-# TODO 
-
-* Work out how to display dead fighters better
-

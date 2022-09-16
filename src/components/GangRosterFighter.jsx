@@ -9,7 +9,7 @@ export default function GangRosterFighter(props) {
     const borderColor = props.fighter.color ?? "black";
 
     return (
-        <tr className={props.fighter.isDead ? "dead" : ""}>
+        <tr className={props.fighter.isDead ? "dead" : props.fighter.inRecovery ? "recovery" : ""}>
             <td className="text-value" style={{borderStyle: 'solid', borderWidth:'2px', borderColor: borderColor}}>{props.fighter.name}</td>
             <td className="text-value">{props.fighter.type}</td>
             <td className="text-value text-numeric">{cost}</td>

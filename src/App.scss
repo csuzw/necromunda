@@ -165,8 +165,12 @@ td {
     gap: 5px;
 }
 
+tr.recovery {
+    opacity: variables.$recovery-opacity;
+}
+
 tr.dead {
-    display: none;
+    opacity: variables.$dead-opacity;
 }
 
 @media only screen and (max-width: 600px) {
@@ -196,8 +200,12 @@ tr.dead {
     height: min-content;
 }
 
+.fighter-card.recovery {
+    opacity: variables.$recovery-opacity;
+}
+
 .fighter-card.dead {
-    display: none;
+    opacity: variables.$dead-opacity;
 }
 
 .fighter-title {

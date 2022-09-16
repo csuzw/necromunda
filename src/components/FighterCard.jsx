@@ -10,7 +10,7 @@ export default function FighterCard(props) {
     const borderColor = props.fighter.color ?? "black";
 
     return (
-        <div className={"fighter-card " + (props.fighter.isDead ? "dead" : "")}  style={{borderStyle: 'solid', borderWidth:'2px', borderColor: borderColor}}>
+        <div className={"fighter-card " + (props.fighter.isDead ? "dead" : props.fighter.inRecovery ? "recovery" : "")}  style={{borderStyle: 'solid', borderWidth:'2px', borderColor: borderColor}}>
             <div className="fighter-title">
                 <div className="fighter-name text-value">{props.fighter.name} ({props.fighter.type}{props.fighter.archetype ? ` - ${props.fighter.archetype}` : ''})</div>
                 <div className="fighter-cost text-value text-numeric">{cost}</div>
