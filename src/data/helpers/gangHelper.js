@@ -7,7 +7,7 @@ const getWargear = (fighter) => {
 
 export const fighterHelper = {
     
-    getCost: (fighter) => fighter.baseCost + equipmentHelper.getWeaponsCost(fighter.weapons) + equipmentHelper.getWargearsCost(getWargear(fighter)),
+    getCost: (fighter) => fighter.isDead ? 0 : fighter.baseCost + equipmentHelper.getWeaponsCost(fighter.weapons) + equipmentHelper.getWargearsCost(getWargear(fighter)),
     getWeaponProfiles: (fighter) => equipmentHelper.getWeaponsProfile(fighter.weapons),
     getSkillsDisplayText: (fighter) => fighter.skills.join(", "),
     getWargearDisplayText: (fighter) => equipmentHelper.getWargearsDisplayText(getWargear(fighter)),

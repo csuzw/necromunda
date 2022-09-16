@@ -21,15 +21,7 @@ Currently hosted at: <https://csuzw.github.io/necromunda>
 * Test using `npm start`
 * Deploy using `npm run deploy`
 
-# TODO
+# TODO 
 
-* Website
-    * Add gang/fighter/campaign narrative sections
-
-* Gang
-    * Naming
-        * Shrike, Abattoir, Watch, Butcher Birds, Laniidae, Lanius
-        * Assemblage, Coterie, Set, Squad, Syndicate, Scryers, Disciples, Fraternity, Seers, Followers, Acolytes, Servants, Scavengers, Apostles, Sisterhood, Prophets
-        * Nest, Roost, Cradle, Perch
-        * Servants of the Shrike
+* Work out how to display dead fighters better
 
