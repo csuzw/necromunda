@@ -151,6 +151,12 @@ export const weapons: WeaponMap = {
     "Flail": { cost: 20, rarity: "common", type: "melee", subType: "mundane" },
     "Chain-glaive": { cost: 60, rarity: "rare", rarityLevel: 7, type: "melee", subType: "twoHanded" },
     "Greatsword": { cost: 40, rarity: "rare", rarityLevel: 10, type: "melee", subType: "twoHanded" },
+    "Beak & talons (Sheen Bird)": { 
+        cost: 0, rarity: "cawdor", type: "melee", subType: "sheenBird", 
+        profile: [ 
+            { name: "Beak & talons", range: { short: "-", long: "E" }, accuracy: { short: "-", long: "-" }, strength: "S", armourPenetration: "-1", damage: "2", ammo: "-", traits: [ "Melee", "Rending" ] } 
+        ]  
+    },
     // GRENADES
     "Blasting charges": { cost: 35, rarity: "rare", rarityLevel: 8, type: "grenades" },
     "Frag grenades": { 
@@ -188,16 +194,33 @@ export const wargear: WargearMap = {
     "Mono-sight": { cost: 35, rarity: "rare", rarityLevel: 9, type: "weaponAccessories" },
     "Telescopic-sight": { cost: 25, rarity: "common", type: "weaponAccessories" },
     // STATUS ITEMS
-    "Sheen birds": { cost: 90, rarity: "cawdor", type: "statusItems", subType: "exoticBeasts" },
+    "Sheen bird": { cost: 90, rarity: "cawdor", type: "statusItems", subType: "exoticBeasts" },
     "Exotic furs": { cost: 50, rarity: "rare", rarityLevel: 12, type: "statusItems", subType: "extravagantGoods" },
     "Gold-plated gun": { cost: 40, rarity: "rare", rarityLevel: 10, type: "statusItems", subType: "extravagantGoods" },
     "Master-crafted weapon": { cost: "*", rarity: "rare", rarityLevel: 10, type: "statusItems", subType: "extravagantGoods" },
     "Opulent jewellery": { cost: 80, rarity: "rare", rarityLevel: 11, type: "statusItems", subType: "extravagantGoods" },
     "Uphive raiments": { cost: 50, rarity: "rare", rarityLevel: 10, type: "statusItems", subType: "extravagantGoods" },
 }
+
+export const rules: RulesMap = {
+    // SKILLS
+    "Marksman": "The fighter is not affected by the rules for Target Priority.  In addition, if the hit roll for an attack made by the fighter with a ranged weapon (that does not have the Blast Trait) is a natural 6, they score a critical hit and the weapon's Damage is doubled (if they are firing a weapon with the Rapid Fire trait, only the Damage of the first hit is doubled).",
+    "Overwatch": "If this fighter is Standing and Active, and has a Ready marker on them, they can interrupt a visible enemy fighter's action as soon as it is declared but before it is carried out.  This fighter loses their Ready marker then immediately makes a Shoot (Basic) action targeting the enemy fighter whose action they have interrupted.  If the enemy is Pinned or Seriously Injured as a result, their activation ends immediately and their action(s) are not made.",
+    // PSYKER
+    "Visions (Divination)": "While this Wyrd Power is maintained, all enemy fighters within 18\" of this fighter that are in full cover count as being in partial cover, and all enemy fighters with 18\" of this fighter that are in partial cover count as being in the open.",
+    // SPECIAL RULES,
+    "Future Sight": "Once per battle, this fighter may use this ability to re-roll any dice roll made during their activation.  This ability may be used to re-roll any number of dice and may even be used on a roll made by an enemy fighter.",
+    "Flight": "A Sheen Bird ignores all terrain, may move freely between levels without restriction, and can never fall. It may not, however, ignore impassable terrain and may not end its movement with its base overlapping an obstacle or another fighter's base.",
+    "Bate": "When the owning fighter activates, the Sheen Bird will attempt to charge an enemy fighter even if the owning fighter does not wish it to. Make a Willpower check for the owning fighter, if this check is failed, the Sheen Bird must perform a Charge (Double) action, during which it must move towards the closest enemy fighter. If the check is passed, the Sheen Bird activates as normal.",
+    "Rake Away": "At the end of the Sheen Bird's activation, if the owner is Standing and Active or Prone and Pinned, they may choose to make a Willpower check. If this check is passed, the Sheen Bird will immediately make a free Move (Simple) action, or Retreat (Basic) action if Engaged, directly towards the owner. If the check is failed, the Sheen Bird does not make this free action and stays where it is.",
+}
 /* eslint-enable no-use-before-define */
 
 /* TYPES */
+type RulesMap = {|
+    [string]: string
+|}
+
 type Profile = {|
     name: string,
     range: {|

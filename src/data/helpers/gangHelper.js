@@ -1,5 +1,7 @@
 import equipmentHelper from "./equipmentHelper";
 
+import { rules as Rules } from '../equipment';
+
 const getWargear = (fighter) => {
     const weaponWargear = fighter.weapons.flatMap(weapon => weapon?.wargear ?? []);
     return fighter.wargear.concat(weaponWargear);
@@ -12,6 +14,7 @@ export const fighterHelper = {
     getSkillsDisplayText: (fighter) => fighter.skills.join(", "),
     getWargearDisplayText: (fighter) => equipmentHelper.getWargearsDisplayText(getWargear(fighter)),
     getRulesDisplayText: (fighter) => fighter.rules?.join(", "),
+    getAllRules: (fighter) => fighter.skills.concat(fighter.rules),
 }
 
 const getRating = (gang) => gang.fighters.reduce((previous, current) => previous + fighterHelper.getCost(current), 0);
@@ -33,4 +36,16 @@ export const gangHelper = {
 
     getStashWeaponsDisplayText: (gang) => equipmentHelper.getWeaponsDisplayText(gang.stash.weapons),
     getStashWargearDisplayText: (gang) => equipmentHelper.getWargearsDisplayText(gang.stash.wargear),
+    getRulesData: (gang) => {
+        let allRules = gang.fighters.reduce((previous, current) => previous.concat(fighterHelper.getAllRules(current)), []);
+        let distinctRules = [...new Set(allRules)];
+        let rulesData = distinctRules.reduce((previous, current) => {
+            let rule = Rules[current];
+            if (rule) {
+                previous.push({ name: current, text: rule });
+            }
+            return previous;
+        }, []);
+        return rulesData;
+    }
 };

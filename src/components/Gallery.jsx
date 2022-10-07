@@ -10,7 +10,6 @@ export default function Gallery(props) {
 
             <div className="fighter-images">
                 {props.gang.fighters.filter(fighter => fighter.image).map((fighter, i) => <img className="fighter-image" key={i} src={process.env.PUBLIC_URL + fighter.image} alt={fighter.name} title={fighter.name} />)}
-                <img className="fighter-image" src={process.env.PUBLIC_URL + '/img/sheen-birds.jpg'} alt="Sheen Birds" title="Sheen Birds" />
             </div>
         </div>
     );

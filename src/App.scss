@@ -214,6 +214,10 @@ tr.dead {
     gap: 5px;
 }
 
+.fighter-cards:not(:first-child) {
+    margin-top: 5px;
+} 
+
 .fighter-card {
     background-color: variables.$section-color;
     padding: 5px;
@@ -260,8 +264,29 @@ tr.dead {
     gap: 5px;
 }
 
+.rule-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.rule-card {
+    background-color: variables.$section-color;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: min-content;
+}
+
 @media only screen and (max-width: 1200px) {
     .fighter-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .rule-cards {
         grid-template-columns: 1fr;
     }
 }
@@ -274,5 +299,21 @@ tr.dead {
 
     header {
         display: none;
+    }
+
+    .fighter-card.recovery {
+        opacity: 1;
+    }
+    
+    .fighter-card.dead {
+        display: none;
+    }
+
+    .fighter-cards {
+        page-break-before: always;
+    }
+
+    .rule-cards {
+        page-break-before: always;
     }
 }
