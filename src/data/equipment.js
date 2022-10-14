@@ -70,7 +70,7 @@ export const weapons: WeaponMap = {
     "Lasgun": { 
         cost: 15, rarity: "common", type: "ranged", subType: "basic", 
         profile: [ 
-            { name: "Lasgun", range: { short: '18"', long: '24"' }, accuracy: { short: "+1", long: "-" }, strength: "3", armourPenetration: "-", damage: "1", ammo: "4+", traits: [ "Rapid Fire (1)" ] } 
+            { name: "Lasgun", range: { short: '18"', long: '24"' }, accuracy: { short: "+1", long: "-" }, strength: "3", armourPenetration: "-", damage: "1", ammo: "4+", traits: [ "Plentiful" ] } 
         ] 
      },
     "Sawn-off shotgun with scatter ammo": { 
