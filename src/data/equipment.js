@@ -20,7 +20,12 @@ const shotgunAmmo: AmmoMap = {
 }
 
 const stubgunAmmo: AmmoMap = {
-    "Dumdum rounds": { cost: 5, rarity: "rare", rarityLevel: 7 },
+    "Dumdum rounds": { 
+        cost: 5, rarity: "rare", rarityLevel: 7 ,
+        profile: [
+            {  name: "- with dumdum ammo", range: { short: '5"', long: '10"' }, accuracy: { short: "+1", long: "-" }, strength: "4", armourPenetration: "-", damage: "1", ammo: "4+", traits: [ "Limited" ] }
+        ],
+    },
 }
 
 const grenadeLauncherAmmo: AmmoMap = {
@@ -100,7 +105,12 @@ export const weapons: WeaponMap = {
             { name: "Reclaimed autopistol", range: { short: '4"', long: '12"' }, accuracy: { short: "+1", long: "-" }, strength: "3", armourPenetration: "-", damage: "1", ammo: "5+", traits: [ "Rapid Fire (1)", "Sidearm" ] } 
         ] 
     },
-    "Hand flamer": { cost: 75, rarity: "rare", rarityLevel: 8, type: "ranged", subType: "pistol" },
+    "Hand flamer": { 
+        cost: 75, rarity: "rare", rarityLevel: 8, type: "ranged", subType: "pistol", 
+        profile: [ 
+            { name: "Hand flamer", range: { short: '-', long: 'T' }, accuracy: { short: "-", long: "-" }, strength: "3", armourPenetration: "-", damage: "1", ammo: "5+", traits: [ "Blaze", "Template" ] } 
+        ] 
+     },
     "Laspistol": { 
         cost: 10, rarity: "common", type: "ranged", subType: "pistol", 
         profile: [ 
@@ -148,6 +158,12 @@ export const weapons: WeaponMap = {
             { name: "Chainaxe", range: { short: "-", long: "E" }, accuracy: { short: "-", long: "+1" }, strength: "S+1", armourPenetration: "-1", damage: "1", ammo: "-", traits: [ "Disarm", "Melee", "Parry", "Rending" ] } 
         ]  
     },
+    "Chainsword": { 
+        cost: 25, rarity: "rare", rarityLevel: 8, type: "melee", subType: "mundane", 
+        profile: [ 
+            { name: "Chainsword", range: { short: "-", long: "E" }, accuracy: { short: "-", long: "+1" }, strength: "S", armourPenetration: "-1", damage: "1", ammo: "-", traits: [ "Melee", "Parry", "Rending" ] } 
+        ]  
+    },
     "Flail": { cost: 20, rarity: "common", type: "melee", subType: "mundane" },
     "Chain-glaive": { cost: 60, rarity: "rare", rarityLevel: 7, type: "melee", subType: "twoHanded" },
     "Greatsword": { cost: 40, rarity: "rare", rarityLevel: 10, type: "melee", subType: "twoHanded" },
@@ -173,6 +189,12 @@ export const weapons: WeaponMap = {
             { name: "Smoke grenade", range: { short: "-", long: "Sx3" }, accuracy: { short: "-", long: "-" }, strength: "-", armourPenetration: "-", damage: "-", ammo: "4+", traits: [ 'Blast (*)', "Grenade", "Smoke" ] } 
         ] 
     },
+    "Stun grenades": { 
+        cost: 30, rarity: "common", type: "grenades", 
+        profile: [ 
+            { name: "Stun grenades", range: { short: "-", long: "Sx3" }, accuracy: { short: "-", long: "-" }, strength: "2", armourPenetration: "-1", damage: "1", ammo: "4+", traits: [ 'Blast (3")', "Grenade", "Concussion" ] } 
+        ]
+     },
 }
 
 export const wargear: WargearMap = {  
