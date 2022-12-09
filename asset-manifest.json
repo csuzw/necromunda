@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/necromunda/static/css/main.2fcfb60d.css",
-    "main.js": "/necromunda/static/js/main.443ef1ab.js",
+    "main.js": "/necromunda/static/js/main.4695edde.js",
     "static/js/787.b2f9b338.chunk.js": "/necromunda/static/js/787.b2f9b338.chunk.js",
     "static/media/Frutiger.woff": "/necromunda/static/media/Frutiger.cc27afddc1803d53ef39.woff",
     "static/media/Frutiger.woff2": "/necromunda/static/media/Frutiger.5fc210e87744fd6eec3d.woff2",
@@ -10,11 +10,11 @@
     "static/media/logo.svg": "/necromunda/static/media/logo.f8a4e0dccc911ff5928fa27d3d9eef66.svg",
     "index.html": "/necromunda/index.html",
     "main.2fcfb60d.css.map": "/necromunda/static/css/main.2fcfb60d.css.map",
-    "main.443ef1ab.js.map": "/necromunda/static/js/main.443ef1ab.js.map",
+    "main.4695edde.js.map": "/necromunda/static/js/main.4695edde.js.map",
     "787.b2f9b338.chunk.js.map": "/necromunda/static/js/787.b2f9b338.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2fcfb60d.css",
-    "static/js/main.443ef1ab.js"
+    "static/js/main.4695edde.js"
   ]
 }
