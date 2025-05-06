@@ -14,7 +14,7 @@ export const fighterHelper = {
     getSkillsDisplayText: (fighter) => fighter.skills.join(", "),
     getWargearDisplayText: (fighter) => equipmentHelper.getWargearsDisplayText(getWargear(fighter)),
     getRulesDisplayText: (fighter) => fighter.rules?.join(", "),
-    getAllRules: (fighter) => fighter.skills.concat(fighter.rules),
+    getAllRules: (fighter) => fighter.skills.concat(fighter.rules).concat(equipmentHelper.getWeaponsTraits(fighter.weapons)),
 }
 
 const getRating = (gang) => gang.fighters.reduce((previous, current) => previous + fighterHelper.getCost(current), 0);

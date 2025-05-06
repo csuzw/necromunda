@@ -73,6 +73,7 @@ const equipmentHelper = {
     getWeaponsCost: (weapons) => weapons.reduce((previous, current) => previous + getWeaponCost(current), 0),
     getWeaponsDisplayText: (weapons) => weapons.map(weapon => getWeaponDisplayText(weapon)).join(', '),
     getWeaponsProfile: (weapons) => weapons.flatMap(weapon => getWeaponProfile(weapon)),
+    getWeaponsTraits: (weapons) => weapons.flatMap(weapon => getWeaponProfile(weapon).flatMap(profile => profile.traits)),
 
     getWargearsCost: (wargear) => wargear.reduce((previous, current) => previous + getWargearCost(current), 0),
     getWargearsDisplayText: (wargear) => wargear.map(item => getWargearDisplayText(item)).join(', '),
