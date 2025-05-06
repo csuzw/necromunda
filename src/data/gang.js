@@ -49,6 +49,7 @@ export const gang: Gang = {
         {
             name: "Aktin Gamma",
             type: "Archeotek",
+            color: "#ff0000",
             image: "/img/aktin-gamma.png",
             baseCost: 125,
             experience: 0,
@@ -79,6 +80,7 @@ export const gang: Gang = {
         {
             name: "Uttu",
             type: "Cyberachnid",
+            color: "#ff0000",
             image: "/img/uttu.png",
             baseCost: 0,
             experience: 0,
@@ -109,6 +111,7 @@ export const gang: Gang = {
         {
             name: "Ovolo Gamma",
             type: "Archeotek",
+            color: "#0000ff",
             image: "/img/ovolo-gamma.png",
             baseCost: 125,
             experience: 0,
@@ -139,6 +142,7 @@ export const gang: Gang = {
         {
             name: "Areop-Enap",
             type: "Cyberachnid",
+            color: "#0000ff",
             image: "/img/areop-enap.png",
             baseCost: 0,
             experience: 0,
@@ -230,6 +234,7 @@ export const gang: Gang = {
         {
             name: "Phial",
             type: "Tek",
+            color: "#00ff00",
             image: "/img/phial.png",
             baseCost: 65,
             experience: 3,
@@ -260,6 +265,7 @@ export const gang: Gang = {
         {
             name: "Detalik",
             type: "Tek",
+            color: "#ffff00",
             image: "/img/detalik.png",
             baseCost: 65,
             experience: 3,
@@ -290,6 +296,7 @@ export const gang: Gang = {
         {
             name: "Tasa",
             type: "Tek",
+            color: "#ff00ff",
             image: "/img/tasa.png",
             baseCost: 65,
             experience: 3,
