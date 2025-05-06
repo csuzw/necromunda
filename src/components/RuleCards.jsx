@@ -8,7 +8,7 @@ export default function RuleCards(props) {
     let rulesData = gangHelper.getRulesData(props.gang);
     return (
         <div className="rule-cards">
-            {rulesData.sort((a, b) => a.name.localCompare(b.name)).map((rule, i) => <RuleCard rule={rule} key={i} />)}
+            {rulesData.sort((a, b) => a.name.localeCompare(b.name)).map((rule, i) => <RuleCard rule={rule} key={i} />)}
         </div>
     );
 }
