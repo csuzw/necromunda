@@ -7,9 +7,12 @@ const getWargear = (fighter) => {
     return fighter.wargear.concat(weaponWargear);
 }
 
+const isHangerOn = (fighter) => fighter.type === "Hanger-On";
+
 export const fighterHelper = {
     
-    getCost: (fighter) => fighter.isDead ? 0 : fighter.baseCost + equipmentHelper.getWeaponsCost(fighter.weapons) + equipmentHelper.getWargearsCost(getWargear(fighter)),
+    isHangerOn: isHangerOn,
+    getCost: (fighter) => fighter.isDead ? 0 : fighter.baseCost + (isHangerOn(fighter) ? 0 : equipmentHelper.getWeaponsCost(fighter.weapons) + equipmentHelper.getWargearsCost(getWargear(fighter))),
     getWeaponProfiles: (fighter) => equipmentHelper.getWeaponsProfile(fighter.weapons),
     getSkillsDisplayText: (fighter) => fighter.skills.join(", "),
     getWargearDisplayText: (fighter) => equipmentHelper.getWargearsDisplayText(getWargear(fighter)),

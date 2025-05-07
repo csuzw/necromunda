@@ -123,6 +123,12 @@ export const weapons: WeaponMap = {
             { name: "Las sub-carbine", range: { short: '4"', long: '12"' }, accuracy: { short: "+1", long: "-" }, strength: "3", armourPenetration: "-", damage: "1", ammo: "4+", traits: [ "Plentiful", "Rapid Fire (1)", "Sidearm" ] } 
         ]  
     },
+    "Master-crafted las sub-carbine": { 
+        cost: 20, rarity: "van saar", type: "ranged", subType: "pistol", 
+        profile: [ 
+            { name: "Master-crafted las sub-carbine", range: { short: '4"', long: '12"' }, accuracy: { short: "+1", long: "-" }, strength: "3", armourPenetration: "-", damage: "1", ammo: "4+", traits: [ "Plentiful", "Rapid Fire (1)", "Sidearm", "Master-crafted" ] } 
+        ]  
+    },
     "Stub gun": { 
         cost: 5, rarity: "common", type: "ranged", subType: "pistol", ammo: stubgunAmmo, 
         profile: [ 
@@ -269,6 +275,7 @@ export const rules: RulesMap = {
     "Overwatch": "If this fighter is Standing and Active, and has a Ready marker on them, they can interrupt a visible enemy fighter's action as soon as it is declared but before it is carried out.  This fighter loses their Ready marker then immediately makes a Shoot (Basic) action targeting the enemy fighter whose action they have interrupted.  If the enemy is Pinned or Seriously Injured as a result, their activation ends immediately and their action(s) are not made.",
     "Weaponsmith": "Any weapons this fighter is equipped with lose the Scarce trait if it has it. Any weapons this fighter is equipped with will gain the Plentiful trait if it does not have the Scarce trait. Weapons that already have the Plentiful trait gain no additional benefit from this skill.",
     "Fixer": "In the Receive Rewards step of the post-battle sequence, as long as this model is not Captured or In Recovery, their gang earns an additional D3x10 credits. Note that they do not need to have taken part in the battle to gain this bonus.",
+    "Munitioneer": "Whenever an Ammo test is failed for this model, or another model from their gang within 6\", it can be re-rolled.",
     // PSYKER
     "Visions (Divination)": "While this Wyrd Power is maintained, all enemy fighters within 18\" of this fighter that are in full cover count as being in partial cover, and all enemy fighters with 18\" of this fighter that are in partial cover count as being in the open.",
     // SPECIAL RULES
@@ -283,6 +290,8 @@ export const rules: RulesMap = {
     "Hot-headed": "Fighters with this special rule have much to prove and often act on impulse alone, hoping to impress their superiors. Consequently, older and wiser fighters expect them to be short-lived. Should a fighter with this special rule be Seriously Injured or be taken Out of Action, friendly fighters that are within 3\" do not have to take a Nerve test, unless they also have this special rule.",
     "Fast Learner": "During Campaign play, when this fighter gains a characteristic Advancement, they do not need to spend an additional 2 XP if the characteristic being improved has already been improved. In other words, this fighter may improve a characteristic any number of times (up to the maximum) for the basic XP cost shown each time.",
     "Master of Cyberteknika": "The cost of any Cyberteknika purchased for a Van Saar Archeotek is reduced by half, before rounding up to the nearest 5 credits.",
+    "Techno-baubles": "If a gang has a Tech-merchant, it may reduce the Rare and/or Illegal value of any item in the Trading Post or the Black Market by 2, to a minimum of 7+. If this reduction would cause the Rare or Illegal value to fall below 7+, the item instead becomes Common.",
+    "Friends in the Trade": "During every post-battle sequence, the cost of one item found in the Trading Post or Black Market may be reduced by D3x10 credits, to a minimum of 20 credits.",
     // WEAPONS
     "Plentiful" : "Ammunition for this weapon is incredibly common. When reloading it, no Ammo test is required - it is automatically reloaded.",
     "Sidearm" : "Weapons with this Trait can be used to make ranged attacks, and can also be used in close combat to make a single attack. Note that their Accuracy bonus only applies when making a ranged attack, not when used to make a close combat attack.",
@@ -299,6 +308,7 @@ export const rules: RulesMap = {
     "Versatile" : "The wielder of a Versatile weapon does not need to be in base contact with an enemy model in order to engage them in melee during their activation. They may engage and make close combat attacks against an enemy model during their activation, so long as the distance between their base and that of the enemy model is equal to or less than the distance shown for the Versatile weapon's Long range characteristic. For example, a fighter armed with a Versatile weapon with a Long range of 2\" may engage an enemy model that is up to 2\" away.  The enemy model is considered to be engaged, but may not in turn be Engaging the fighter armed with the Versatile weapon unless they too are armed with a Versatile weapon, and so may not be able to make Reaction attacks.  At all other times other than during this fighter's activation, Versatile has no effect.",
     "Template" : "Template weapons use the Flame template to determine how many targets they hit.",
     "Melee" : "This weapon can be used during close combat attacks.",
+    "Master-crafted" : "Once per battle, re-roll a single failed hit roll.",
 }
 /* eslint-enable no-use-before-define */
 
