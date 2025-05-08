@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/necromunda/static/css/main.28920b58.css",
-    "main.js": "/necromunda/static/js/main.9ef80f07.js",
+    "main.css": "/necromunda/static/css/main.b4522dc4.css",
+    "main.js": "/necromunda/static/js/main.44e57fbd.js",
     "static/js/787.b2f9b338.chunk.js": "/necromunda/static/js/787.b2f9b338.chunk.js",
     "static/media/logo.svg": "/necromunda/static/media/logo.394938791b5ef2657724a29589f8b1a5.svg",
     "static/media/Frutiger.woff": "/necromunda/static/media/Frutiger.cc27afddc1803d53ef39.woff",
@@ -9,12 +9,12 @@
     "static/media/BankGothic.woff": "/necromunda/static/media/BankGothic.bc4feb4585fcd692c982.woff",
     "static/media/BankGothic.woff2": "/necromunda/static/media/BankGothic.0ca3f3f769ce472aea96.woff2",
     "index.html": "/necromunda/index.html",
-    "main.28920b58.css.map": "/necromunda/static/css/main.28920b58.css.map",
-    "main.9ef80f07.js.map": "/necromunda/static/js/main.9ef80f07.js.map",
+    "main.b4522dc4.css.map": "/necromunda/static/css/main.b4522dc4.css.map",
+    "main.44e57fbd.js.map": "/necromunda/static/js/main.44e57fbd.js.map",
     "787.b2f9b338.chunk.js.map": "/necromunda/static/js/787.b2f9b338.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28920b58.css",
-    "static/js/main.9ef80f07.js"
+    "static/css/main.b4522dc4.css",
+    "static/js/main.44e57fbd.js"
   ]
 }
