@@ -309,11 +309,15 @@ tr.dead {
         display: none;
     }
 
-    .fighter-cards {
-        page-break-before: always;
+    .fighter-card, .rule-card {
+        break-inside: avoid;
     }
 
     .rule-cards {
-        page-break-before: always;
+        break-before: always;
+    }
+
+    .text-label {
+        color: currentColor;
     }
 }

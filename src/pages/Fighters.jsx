@@ -6,7 +6,7 @@ import { gang } from '../data/gang.js';
 
 export default function Fighters() {
 
-    const chunkSize = 8;
+    const chunkSize = 100;
     const chunkedFighters = gang.fighters.reduce((all, one, i) => {
             const ch = Math.floor(i/chunkSize); 
             all[ch] = [].concat((all[ch]||[]),one); 
