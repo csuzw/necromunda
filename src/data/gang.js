@@ -325,7 +325,7 @@ export const gang: Gang = {
             rules: [ "Gang Fighter (Ganger)" ],
         },
         {
-            name: "Arc",
+            name: "Erasmus Jad",
             type: "Hanger-On",
             archetype: "Tech-Merchant",
             baseCost: 40,
