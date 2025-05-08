@@ -24,6 +24,9 @@ export default function NavBar(props) {
                     <li className={styles.navBarMenuListItem}>
                         <Link className={styles.navBarLink} to="/fighters">Fighters</Link>
                     </li>
+                    <li className={styles.navBarMenuListItem}>
+                        <Link className={styles.navBarLink} to="/tactics">Tactics</Link>
+                    </li>
                 </ul>
             </nav>
             <div className={`${styles.navBarHamburgerMenu} ${isHamburgerMenuOpen ? styles.navBarHamburgerMenuOpen : ""}`} onClick={toggleHamburgerMenuOpen}>
@@ -39,6 +42,9 @@ export default function NavBar(props) {
                     </li>
                     <li className={styles.navBarMenuListItem}>
                         <Link className={styles.navBarLink} to="/fighters">Fighters</Link>
+                    </li>
+                    <li className={styles.navBarMenuListItem}>
+                        <Link className={styles.navBarLink} to="/tactics">Tactics</Link>
                     </li>
                 </ul>
             </div>

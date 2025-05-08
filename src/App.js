@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Gang from './pages/Gang';
 import Fighters from './pages/Fighters';
+import Tactics from './pages/Tactics';
 import './App.scss';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/gang" element={<Gang />} />
           <Route path="/fighters" element={<Fighters />} />
+          <Route path="/tactics" element={<Tactics />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </main>

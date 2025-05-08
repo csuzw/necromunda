@@ -95,6 +95,10 @@ td {
     background-color: variables.$text-alt-background-color;
 }
 
+.fill-space {
+    height: 100%;
+}
+
 /* HOME */
 .main-image {
     width: 100%;
@@ -278,16 +282,30 @@ tr.dead {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    height: min-content;
+    height: auto;
+}
+
+/* TACTICS */
+.tactic-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.tactic-card {
+    background-color: variables.$section-color;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 225px;
 }
 
 @media only screen and (max-width: 1200px) {
-    .fighter-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .rule-cards {
-        grid-template-columns: 1fr;
+    .fighter-cards, .rule-cards, .tactic-cards {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -309,15 +327,22 @@ tr.dead {
         display: none;
     }
 
-    .fighter-card, .rule-card {
+    .fighter-card, .rule-card, .tactic-card {
         break-inside: avoid;
     }
 
-    .rule-cards {
+    .rule-cards, .tactic-cards {
         break-before: always;
     }
 
     .text-label {
         color: currentColor;
+    }
+
+    .tactic-card {
+        font-size: x-small;
+        height: 175px;
+        border-style: solid;
+        border-color: black;
     }
 }
