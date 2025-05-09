@@ -75,7 +75,7 @@ export const weapons: WeaponMap = {
     "Lasgun": { 
         cost: 10, rarity: "common", type: "ranged", subType: "basic", 
         profile: [ 
-            { name: "Lasgun", range: { short: '18"', long: '24"' }, accuracy: { short: "+1", long: "-" }, strength: "3", armourPenetration: "-", damage: "1", ammo: "4+", traits: [ "Plentiful" ] } 
+            { name: "Lasgun", range: { short: '18"', long: '24"' }, accuracy: { short: "+1", long: "-" }, strength: "3", armourPenetration: "-", damage: "1", ammo: "2+", traits: [ "Plentiful" ] } 
         ] 
      },
     "Sawn-off shotgun with scatter ammo": { 
@@ -148,6 +148,12 @@ export const weapons: WeaponMap = {
         cost: 30, rarity: "rare", rarityLevel: 7, type: "ranged", subType: "special", 
         profile: [ 
             { name: "Long rifle", range: { short: '24"', long: '48"' }, accuracy: { short: "-", long: "+1" }, strength: "4", armourPenetration: "-1", damage: "1", ammo: "4+", traits: [ "Knockback" ] } 
+        ]  
+    },
+    "Long las": { 
+        cost: 20, rarity: "common", type: "ranged", subType: "special", 
+        profile: [ 
+            { name: "Long las", range: { short: '18"', long: '36"' }, accuracy: { short: "-", long: "+1" }, strength: "4", armourPenetration: "-", damage: "1", ammo: "2+", traits: [ "Plentiful" ] } 
         ]  
     },
     "Rad beamer": { 
@@ -252,6 +258,7 @@ export const wargear: WargearMap = {
     "Skinblade": { cost: 10, rarity: "common", type: "personalEquipment" },
     "Augurspex": { cost: 20, rarity: "van saar", type: "personalEquipment" },
     "Grav-cutter": { cost: 0, rarity: "van saar", type: "personalEquipment" },
+    "Cameleoline cloak": { cost: 35, rarity: "rare", rarityLevel: 9, type: "personalEquipment" },
     // WEAPON ACCESSORIES
     "Infra-sight": { cost: 40, rarity: "rare", rarityLevel: 8, type: "weaponAccessories" },
     "Mono-sight": { cost: 35, rarity: "rare", rarityLevel: 9, type: "weaponAccessories" },

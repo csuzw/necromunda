@@ -165,6 +165,7 @@ td {
 
 .gang-roster-battles table {
     width: 100%;
+    table-layout: fixed;
 }
 
 .battle-me {
@@ -173,6 +174,11 @@ td {
 
 .battle-opponent {
     color: variables.$failure-color;
+}
+
+.battle-image {
+    width: 100%;
+    object-fit: contain;
 }
 
 tr.battle-success td {
@@ -301,6 +307,10 @@ tr.dead {
     flex-direction: column;
     gap: 5px;
     height: 225px;
+}
+
+.tactic-used {
+    opacity: variables.$dead-opacity;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -91,7 +91,7 @@ export const deck: Deck = [
         type: "Van Saar",
         use: "Play when a fighter makes a ranged attack.",
         text: "For the duration of the fighter's activation, one of their Las or Plasma ranged weapons increases its Strength by 2.",
-        used: false,
+        used: true,
     },
     {
         name: "Pneumatic Injectors",
@@ -105,7 +105,7 @@ export const deck: Deck = [
         type: "Universal",
         use: "Play this card when activating a fighter.",
         text: "This turn, the fighter may make two Fire (Basic) actions, provided they use the same weapon for both and make no other actions for any reason. However, at the end of the activation, the weapon counts as automatically having failed an Ammo check.",
-        used: false,
+        used: true,
     },
     {
         name: "Seize the Initiative",

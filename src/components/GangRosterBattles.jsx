@@ -12,6 +12,7 @@ export default function GangRosterBattles(props) {
                         <th>Territory</th>
                         <th>Opponent</th>
                         <th>Out of Action</th>
+                        <th>Tactics Used</th>
                     </tr>
                 </thead>
                 <tbody>
