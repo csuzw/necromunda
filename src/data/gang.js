@@ -340,6 +340,7 @@ export const gang: Gang = {
         {
             name: "Ahijuna",
             type: "Subtek",
+            image: "/img/ahijuna.png",
             baseCost: 35,
             experience: 0,
             advancements: 0,
@@ -370,6 +371,7 @@ export const gang: Gang = {
             name: "Erasmus Jad",
             type: "Hanger-On",
             archetype: "Tech-Merchant",
+            image: "/img/erasmus-jad.png",
             baseCost: 40,
             experience: 0,
             advancements: 0,
