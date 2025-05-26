@@ -249,18 +249,18 @@ export const wargear: WargearMap = {
     "Gutterforged cloak": { cost: 15, rarity: "cawdor", type: "armour" },
     "Hazard suit": { cost: 10, rarity: "rare", rarityLevel: 10, type: "armour" },
     "Mesh armour": { cost: 15, rarity: "common", type: "armour" },
-    "Armoured bodyglove": { cost: 0, rarity: "van saar", type: "armour" },
+    "Armoured bodyglove": { cost: 0, rarity: "van saar", type: "armour", description: "" },
     // FIELD ARMOUR
     // PERSONAL EQUIPMENT
     "Amoured undersuit": { cost: 25, rarity: "rare", rarityLevel: 7, type: "personalEquipment" },
     "Bomb delivery rats": { cost: 30, rarity: "cawdor", type: "personalEquipment" },
     "Cult icon": { cost: 40, rarity: "cawdor", type: "personalEquipment" },
     "Skinblade": { cost: 10, rarity: "common", type: "personalEquipment" },
-    "Augurspex": { cost: 20, rarity: "van saar", type: "personalEquipment" },
-    "Grav-cutter": { cost: 0, rarity: "van saar", type: "personalEquipment" },
+    "Augurspex": { cost: 20, rarity: "van saar", type: "personalEquipment", description: "Enemy fighters may not be set up within 12\" of a fighter with an augurspex as either Reinforcements or using the Infiltrate skill." },
+    "Grav-cutter": { cost: 0, rarity: "van saar", type: "personalEquipment", description: "A fighter equipped with a grav-cutter increases their Movement characteristic by 2\", ignores all terrain, may move freely between levels without restriction, can never fall, and may move over enemy fighters, ignoring the 1\" rule. They may not, however, ignore impassable terrain and may not end their movement with their base overlapping an obstacle or within 1\" of another fighter's base.  When a fighter equipped with a grav-cutter is hit by a ranged attack, they do not become Prone and Pinned. However, a fighter equipped with a grav-cutter is unable to perform a Take Cover (Basic) action, nor can they voluntarily become Prone and Pinned for any other reason. In addition, a fighter equipped with a grav-cutter is not able to make the best use of cover. To represent this, when an enemy fighter shoots at a fighter equipped with a grav-cutter, any negative modifiers that may apply to the hit roll due to cover are reduced by 1.  Should a fighter equipped with a grav-cutter ever become Prone for any other reason (due to being Seriously Injured and then recovering, for example), they are unable to make a Stand Up (Basic) action and must instead make a Stand Up (Double) action, regardless of any other special rules or skills that may otherwise affect their ability to stand up (the Spring Up skill, for example)." },
     "Cameleoline cloak": { cost: 35, rarity: "rare", rarityLevel: 9, type: "personalEquipment" },
     // WEAPON ACCESSORIES
-    "Infra-sight": { cost: 40, rarity: "rare", rarityLevel: 8, type: "weaponAccessories" },
+    "Infra-sight": { cost: 40, rarity: "rare", rarityLevel: 8, type: "weaponAccessories", description: "Weapons with the Rapid Fire (X) or Blast (3\"/5\") trait cannot be fitted with an infra-sight. A weapon with an infra-sight can be used to attack through smoke clouds, and increases the value of X\" in the Visibility (X\") rule by 9\". In addition, there is no hit modifier when the weapon targets a fighter in partial cover, and a -1 modifier (instead of -2) when it targets a model in full cover." },
     "Mono-sight": { cost: 35, rarity: "rare", rarityLevel: 9, type: "weaponAccessories" },
     "Telescopic-sight": { cost: 25, rarity: "common", type: "weaponAccessories" },
     // STATUS ITEMS
@@ -272,8 +272,9 @@ export const wargear: WargearMap = {
     "Opulent jewellery": { cost: 80, rarity: "rare", rarityLevel: 11, type: "statusItems", subType: "extravagantGoods" },
     "Uphive raiments": { cost: 50, rarity: "rare", rarityLevel: 10, type: "statusItems", subType: "extravagantGoods" },
     // CYBER TEKNIKA
-    "Occular Alpha (0)": { cost: 0, rarity: "van saar", type: "archaeoCyberteknika" },
-    "Torsonic Gamma (15)": { cost: 15, rarity: "van saar", type: "archaeoCyberteknika" }
+    "Occular Alpha (0)": { cost: 0, rarity: "van saar", type: "archaeoCyberteknika", description: "This fighter is considered to always be equipped with an infra-sight, the benefits of which are applied to any ranged weapon they carry." },
+    "Torsonic Gamma (15)": { cost: 15, rarity: "van saar", type: "archaeoCyberteknika", description: "An unarmed attack made by this fighter has a Damage characteristic of 3, rather than the usual 1.  An unarmed attack made by this fighter has a Damage characteristic of 3, rather than the usual 1. In addition, this fighter may apply a +2 modifier to their Strength characteristic when resolving hits made with a weapon that has either the Melee or Versatile trait." },
+    "Vascular Alpha (20)": { cost: 20, rarity: "van saar", type: "archaeoCyberteknika", description: "This fighter may apply a +1 modifier to their Toughness characteristic for the purposes of the number of Flesh Wounds they can take before going Out of Action." }
 }
 
 export const rules: RulesMap = {
@@ -369,7 +370,8 @@ type Wargear = {|
     rarity?: string,
     rarityLevel?: number,
     type?: string,
-    subType?: string
+    subType?: string,
+    description?: string
 |}
 
 type WeaponMap = {|
